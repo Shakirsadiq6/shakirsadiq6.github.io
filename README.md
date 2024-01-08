@@ -12,7 +12,7 @@ Welcome to my portfolio! This is a simple website I created to showcase my proje
 
 ## Demo
 
-You can visit the live website here: [My Portfolio](shakirsadiq6.github.io)
+You can visit the live website here: https://shakirsadiq6.github.io
 
 ## Features
 
