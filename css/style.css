@@ -233,19 +233,19 @@ nav img {
   color: rgba(24, 185, 207, 0.9);
 }
 
-.nav-link:nth-child(4):hover {
+.nav-link:nth-child(5):hover {
   transform: scale(1.08);
   background: transparent;
   transition: transform 0.4s ease-in-out;
 }
 
-.nav-link:nth-child(4) a {
+.nav-link:nth-child(5) a {
   display: block;
   padding: 0.8rem 2.5rem;
   cursor: pointer;
 }
 
-.nav-link:nth-child(4) a {
+.nav-link:nth-child(5) a {
   color: rgb(204, 213, 243);
 }
 
@@ -334,7 +334,7 @@ main {
 }
 
 .cta2,
-.nav-link:nth-child(4) {
+.nav-link:nth-child(5) {
   position: relative;
   border-radius: 1rem;
   border-image-slice: 1;
@@ -347,7 +347,7 @@ main {
 }
 
 .cta2::after,
-.nav-link:nth-child(4)::after {
+.nav-link:nth-child(5)::after {
   position: absolute;
   content: "";
   top: -1.8px;
@@ -911,7 +911,7 @@ footer span {
 
   .nav-menu {
     position: static;
-    width: 30%;
+    width: 35%;
     height: auto;
     justify-self: flex-end;
     flex-direction: row;
