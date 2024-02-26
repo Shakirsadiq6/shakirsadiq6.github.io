@@ -8,7 +8,6 @@ Welcome to my portfolio! This is a simple website I created to showcase my proje
 - [Technologies Used](#technologies-used)
 - [Setup and Deployment](#setup-and-deployment)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Demo
 
