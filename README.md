@@ -25,6 +25,7 @@ You can visit the live website here: https://shakirsadiq6.github.io
 - HTML
 - CSS
 - JavaScript
+- Openrouter AI (https://openrouter.ai/)
 
 ## Setup and Deployment
 
