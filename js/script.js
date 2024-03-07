@@ -1,4 +1,5 @@
-const baseUrl = 'https://api.openai.com/v1/chat/completions';
+const baseUrl = 'https://openrouter.ai/api/v1/chat/completions';
+const freeApiKey = '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'; // you can get your free key from https://openrouter.ai/
 const loader = `<span class='loader'><span class='loader__dot'></span><span class='loader__dot'></span><span class='loader__dot'></span></span>`;
 const errorMessage = 'Apologies, I am currently unavailable. Please feel free to reach out to me via email at shakirsadiq24@gmail.com.';
 const urlPattern = /(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
@@ -122,10 +123,10 @@ const scrollDown = () => {
 const sendOpenAIRequest = (text = '') => {
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
-  myHeaders.append("Authorization", "Bearer "+openaiKeyFunc("me-CBWX7kMoYyD1CgpJsTnkN3VfveZDrqhE3TkNfVTw7pLXbIKi"));
+  myHeaders.append("Authorization", "Bearer " + freeApiKey);
 
   const raw = JSON.stringify({
-    "model": "gpt-3.5-turbo",
+    "model": "openchat/openchat-7b:free",
     "messages": [
       {
         "role": "user",
@@ -156,11 +157,8 @@ const sendOpenAIRequest = (text = '') => {
         "content": text
       }
     ],
-    "temperature": 0.7,
-    "max_tokens": 512,
-    "top_p": 1,
-    "frequency_penalty": 0,
-    "presence_penalty": 0
+    "temperature": 0.8,
+    "max_tokens": 512
   });
 
   const requestOptions = {
@@ -188,17 +186,3 @@ const sendOpenAIRequest = (text = '') => {
 
   aiMessage(loader, true, botLoadingDelay);
 };
-
-function openaiKeyFunc(text) {
-  let result = "";
-  for (let i = 0; i < text.length; i++) {
-      let char = text[i];
-      if (char.match(/[a-z]/i)) {
-          let asciiOffset = char === char.toUpperCase() ? 'A'.charCodeAt(0) : 'a'.charCodeAt(0);
-          result += String.fromCharCode(((char.charCodeAt(0) - asciiOffset - 20 + 26) % 26) + asciiOffset);
-      } else {
-          result += char;
-      }
-  }
-  return result;
-}
